@@ -12,6 +12,10 @@ namespace Program01.Controllers
     public class StudentDetailsAPI : ControllerBase
     {
         private readonly DataBaseRespository _dataBaseRespository;
+        /// <summary>
+        /// Created API controller
+        /// </summary>
+        /// <param name="configuration"></param>
         public StudentDetailsAPI(IConfiguration configuration) 
         {
             _dataBaseRespository = new DataBaseRespository(configuration);
