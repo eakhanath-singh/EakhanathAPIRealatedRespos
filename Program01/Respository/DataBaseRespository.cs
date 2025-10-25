@@ -104,6 +104,11 @@ namespace Program01.Respository
             return studentRecordsList;
         }
 
+        /// <summary>
+        /// GetStudentRecordsById to get the values based on ID
+        /// </summary>
+        /// <param name="studentId"></param>
+        /// <returns></returns>
         public StudentRecords GetStudentRecordsById (int studentId)
         {
             StudentRecords studentRecord = new StudentRecords();

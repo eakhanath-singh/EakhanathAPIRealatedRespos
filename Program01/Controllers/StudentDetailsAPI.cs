@@ -14,6 +14,7 @@ namespace Program01.Controllers
         private readonly DataBaseRespository _dataBaseRespository;
         /// <summary>
         /// Created API controller
+        /// Constructor
         /// </summary>
         /// <param name="configuration"></param>
         public StudentDetailsAPI(IConfiguration configuration) 
@@ -29,8 +30,17 @@ namespace Program01.Controllers
         [HttpGet]
         public IActionResult GetAllStudents()
         {
-            var result = _dataBaseRespository.GetAllStudentRecords();
-            return Ok(result);
+            try
+            {
+                var result = _dataBaseRespository.GetAllStudentRecords();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
         }
 
         // GET api/<StudentDetailsAPI>/5
@@ -42,8 +52,17 @@ namespace Program01.Controllers
         [HttpGet("{studentId}")]
         public IActionResult GetStudentResultId(int studentId)
         {
-            var result = _dataBaseRespository.GetStudentRecordsById(studentId);
-            return Ok(result);
+            try
+            {
+                var result = _dataBaseRespository.GetStudentRecordsById(studentId);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
         }
 
         // POST api/<StudentDetailsAPI>
