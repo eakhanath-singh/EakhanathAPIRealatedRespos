@@ -82,7 +82,7 @@ namespace Program01.Respository
                             FirstName = reader["FirstName"].ToString(),
                             LastName = reader["LastName"].ToString(),
                             Gender = reader["Gender"].ToString(),
-                            DateOfBirth = DateOnly.FromDateTime(Convert.ToDateTime(reader["DateOfBirth"])),//.Parse(reader["DateOfBirth"].ToString()),
+                            DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),//.Parse(reader["DateOfBirth"].ToString()),
                             Age = Convert.ToInt32(reader["Age"]),
                             Email = reader["Email"].ToString(),
                             Phone = reader["Phone"].ToString(),
@@ -91,12 +91,12 @@ namespace Program01.Respository
                             State = reader["State"].ToString(),
                             Country = reader["Country"].ToString(),
                             PostalCode = reader["PostalCode"].ToString(),
-                            AdmissionDate = DateOnly.FromDateTime(Convert.ToDateTime(reader["AdmissionDate"])), //.Parse(reader["AdmissionDate"].ToString()),
+                            AdmissionDate = Convert.ToDateTime(reader["AdmissionDate"]), //.Parse(reader["AdmissionDate"].ToString()),
                             Course = reader["Course"].ToString(),
                             Department = reader["Department"].ToString(),
                             YearOfStudy = Convert.ToInt32(reader["YearOfStudy"]),
                             GPA = Convert.ToDecimal(reader["GPA"]),
-                            CreatedDate = DateOnly.FromDateTime(Convert.ToDateTime(reader["CreatedDate"]))
+                            CreatedDate =Convert.ToDateTime(reader["CreatedDate"])
                         });
                 }
             }
@@ -128,7 +128,7 @@ namespace Program01.Respository
                         FirstName = reader["FirstName"].ToString(),
                         LastName = reader["LastName"].ToString(),
                         Gender = reader["Gender"].ToString(),
-                        DateOfBirth = DateOnly.FromDateTime(Convert.ToDateTime(reader["DateOfBirth"])),//.Parse(reader["DateOfBirth"].ToString()),
+                        DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),//.Parse(reader["DateOfBirth"].ToString()),
                         Age = Convert.ToInt32(reader["Age"]),
                         Email = reader["Email"].ToString(),
                         Phone = reader["Phone"].ToString(),
@@ -137,12 +137,12 @@ namespace Program01.Respository
                         State = reader["State"].ToString(),
                         Country = reader["Country"].ToString(),
                         PostalCode = reader["PostalCode"].ToString(),
-                        AdmissionDate = DateOnly.FromDateTime(Convert.ToDateTime(reader["AdmissionDate"])),
+                        AdmissionDate = Convert.ToDateTime(reader["AdmissionDate"]),
                         Course = reader["Course"].ToString(),
                         Department = reader["Department"].ToString(),
                         YearOfStudy = Convert.ToInt32(reader["YearOfStudy"]),
                         GPA = Convert.ToDecimal(reader["GPA"]),
-                        CreatedDate = DateOnly.FromDateTime(Convert.ToDateTime(reader["CreatedDate"]))
+                        CreatedDate = Convert.ToDateTime(reader["CreatedDate"])
                     };
                 }
             }
